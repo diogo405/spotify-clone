@@ -11,3 +11,12 @@ body {
   color: white;
   height: 100vh;
 }
+
+.title {
+  font-size: 32px;
+  margin: 0;
+}
+.subtitle {
+  font-size: 24px;
+  margin: 0;
+}

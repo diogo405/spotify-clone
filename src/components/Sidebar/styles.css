@@ -1,0 +1,22 @@
+.sidebar {
+  background-color: black;
+  height: 100vh;
+}
+.sidebar__logo {
+  max-width: 40px;
+  padding: 20px 20px 0 20px;
+}
+.sidebar__logo path {
+  fill: var(--green);
+}
+.sidebar__separator {
+  margin: 20px 10px;
+  border: 1px solid #423a39;
+  border-radius: 5px;
+}
+
+@media (max-width: 578px) {
+  .sidebar {
+    height: fit-content;
+  }
+}
