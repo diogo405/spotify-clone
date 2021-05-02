@@ -10,6 +10,7 @@
   border: 2px solid var(--green);
   background-color: transparent;
   transition: all 250ms ease-out;
+  outline: none;
 }
 .play:hover {
   background-color: var(--green);
