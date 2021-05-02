@@ -1,9 +1,12 @@
 import React from 'react'
+import Back from '../../components/Back'
 import './styles.css'
 
 const AlbumPage = () => {
   return (
-    <div>foo</div>
+    <>
+      <Back url="/" />
+    </>
   )
 }
 
