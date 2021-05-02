@@ -1,0 +1,21 @@
+.rplayed {
+  margin-top: 30px;
+}
+.rplayed__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+  .rplayed__grid { 
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .rplayed__grid { 
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

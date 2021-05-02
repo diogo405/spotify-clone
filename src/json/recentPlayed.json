@@ -1,0 +1,38 @@
+[
+  {
+    "id": 9001,
+    "title": "Scorpion",
+    "artist": "Drake",
+    "thumbnail": "https://i.scdn.co/image/ab67616d0000b273f907de96b9a4fbc04accc0d5"
+  },
+  {
+    "id": 8776,
+    "title": "i am > i was",
+    "artist": "21 Savage",
+    "thumbnail": "https://i.scdn.co/image/ab67616d0000b273280689ecc5e4b2038bb5e4bd"
+  },
+  {
+    "id": 51,
+    "title": "Abaixo de Zero: Hello Hell",
+    "artist": "Black Alien",
+    "thumbnail": "https://i.scdn.co/image/ab67616d0000b273de82ffcfe8f5dca0ef611e9c"
+  },
+  {
+    "id": 665,
+    "title": "JACKBOYS",
+    "artist": "JACKBOYS, Travis Scott",
+    "thumbnail": "https://i.scdn.co/image/ab67616d0000b273dfc2f59568272de50a257f2f"
+  },
+  {
+    "id": 76,
+    "title": "Spilled Ink",
+    "artist": "Lyrical, lo-fi",
+    "thumbnail": "https://i.scdn.co/image/ab67706f00000002cfe16c055d72f03852ef2d8c"
+  },
+  {
+    "id": 109,
+    "title": "The College Dropout",
+    "artist": "Kanye West",
+    "thumbnail": "https://i.scdn.co/image/ab67616d0000b27325b055377757b3cdd6f26b78"
+  }
+]

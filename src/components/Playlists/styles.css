@@ -1,0 +1,32 @@
+.playlists {
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style: none;
+  overflow: scroll;
+  height: calc(100vh - 255px);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.playlists::-webkit-scrollbar {
+  display: none;
+}
+.playlists > * {
+  margin-top: 5px;
+}
+.playlists > *:first-child {
+  margin-top: 0;
+}
+.playlist {
+  font-size: 14px;
+  color: darkgrey;
+  cursor: pointer;
+}
+.playlist:hover {
+  color: white;
+}
+
+@media (max-width: 578px) {
+  .playlists {
+    height: 400px;
+  } 
+}

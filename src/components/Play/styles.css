@@ -1,0 +1,27 @@
+.play {
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  border: 2px solid var(--green);
+  background-color: transparent;
+  transition: all 250ms ease-out;
+}
+.play:hover {
+  background-color: var(--green);
+  box-shadow: 0 5px 10px -1px rgba(0,0,0,0.8);
+}
+.play__icon {
+  fill: var(--green);
+  width: 20px;
+  height: 20px;
+  transition: all 150ms ease-out;
+  margin-left: 2px;
+}
+.play:hover .play__icon {
+  fill: white;
+}

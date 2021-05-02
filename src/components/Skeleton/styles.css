@@ -1,0 +1,24 @@
+@keyframes sweep {
+  0% { left: -150px; }
+  100% { left: 100%; }
+}
+.skeleton {
+  border-radius: 5px;
+  background-color: #423a39;
+  position: relative;
+  overflow: hidden;
+}
+.skeleton::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(to right, transparent 0%, #554C4B 50%, transparent 100%);
+  animation-name: sweep;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+  animation-iteration-count: infinite;
+}

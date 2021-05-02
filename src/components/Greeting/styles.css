@@ -1,0 +1,25 @@
+.greeting {}
+.greeting__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1366px) {
+  .greeting__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .greeting__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
