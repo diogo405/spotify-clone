@@ -16,6 +16,8 @@
 }
 .list-item a {
   text-decoration: none;
+  width: 100%;
+  display: block;
 }
 .list-item__icon {
   margin-right: 15px;
