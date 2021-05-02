@@ -24,8 +24,8 @@ const Greeting: React.FC<IGreeting> = ({greetingSuggestions, loading}) => {
           </>
         ) : (
           greetingSuggestions.map(suggestion => (
-            <Link to={`/album/${suggestion.id}`}>
-              <Chip thumbnail={suggestion.thumbnail} key={suggestion.id}>
+            <Link to={`/album/${suggestion.id}`} key={suggestion.id}>
+              <Chip thumbnail={suggestion.thumbnail}>
                 {suggestion.title}
               </Chip>
             </Link>
