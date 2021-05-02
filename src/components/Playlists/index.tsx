@@ -11,7 +11,7 @@ const Playlists: React.FC<IPlaylists> = ({playlists, loading}) => {
   if (loading) {
     return (
       <ul className="playlists">
-        {[...Array(20).keys()].map(n => <Skeleton height="20px" />)}
+        {[...Array(20).keys()].map(n => <Skeleton height="20px" key={n} />)}
       </ul>
     )
   }

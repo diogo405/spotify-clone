@@ -8,19 +8,19 @@ import './App.css'
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <div className="app">
-          <Sidebar />
-          <main className="main">
+      <div className="app">
+        <Sidebar />
+        <main className="main">
+          <Switch>
             <Route path="/album/:id">
               <AlbumPage />
             </Route>
             <Route exact path="/">
               <HomePage />
             </Route>
-          </main>
-        </div>
-      </Switch>
+          </Switch>
+        </main>
+      </div>
     </Router>
   )
 }
