@@ -19,6 +19,9 @@ const App = () => {
   const [playlistsLoading, setPlaylistsLoading] = useState(true)
 
   useEffect(() => {
+
+    // Without async/await so they load async
+
     getGreeting().then(res => {
       setGreetingSuggestions(res)
       setGreetingSuggestionsLoading(false)
