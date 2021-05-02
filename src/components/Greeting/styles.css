@@ -5,6 +5,10 @@
   grid-gap: 20px;
   margin-top: 30px;
 }
+.greeting__grid a {
+  color: white;
+  text-decoration: none;
+}
 
 @media (max-width: 1366px) {
   .greeting__grid {

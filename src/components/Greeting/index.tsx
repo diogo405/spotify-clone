@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './styles.css'
 import {ISuggestion} from '../../API'
 import Chip from '../Chip'
@@ -23,9 +24,11 @@ const Greeting: React.FC<IGreeting> = ({greetingSuggestions, loading}) => {
           </>
         ) : (
           greetingSuggestions.map(suggestion => (
-            <Chip thumbnail={suggestion.thumbnail} key={suggestion.id}>
-              {suggestion.title}
-            </Chip>
+            <Link to={`/album/${suggestion.id}`}>
+              <Chip thumbnail={suggestion.thumbnail} key={suggestion.id}>
+                {suggestion.title}
+              </Chip>
+            </Link>
           ))
         )}
       </div>

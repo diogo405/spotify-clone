@@ -14,6 +14,9 @@
 .list-item:hover {
   background-color: #423a39;
 }
+.list-item a {
+  text-decoration: none;
+}
 .list-item__icon {
   margin-right: 15px;
   fill: white;
@@ -22,4 +25,6 @@
 }
 .list-item__label {
   font-size: 14px;
+  cursor: pointer;
+  color: white;
 }
