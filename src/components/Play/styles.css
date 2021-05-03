@@ -12,6 +12,10 @@
   transition: all 250ms ease-out;
   outline: none;
 }
+.play--big {
+  width: 54px;
+  height: 54px;
+}
 .play:hover {
   background-color: var(--green);
   box-shadow: 0 5px 10px -1px rgba(0,0,0,0.8);
@@ -22,6 +26,10 @@
   height: 20px;
   transition: all 150ms ease-out;
   margin-left: 2px;
+}
+.play--big .play__icon {
+  width: 33px;
+  height: 35px;
 }
 .play:hover .play__icon {
   fill: white;
