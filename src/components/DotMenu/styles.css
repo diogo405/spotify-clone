@@ -1,0 +1,18 @@
+.dotmenu {
+  display: flex;
+  cursor: pointer;
+  padding: 5px 0;
+}
+.dotmenu > div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-right: 6px;
+}
+.dotmenu > div:last-child {
+  margin-right: 0;
+}
+.dotmenu:hover > div {
+  background-color: white;
+}
