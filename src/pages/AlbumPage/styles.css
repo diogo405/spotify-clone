@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.header__wrapper {
+  margin-left: 30px;
+}
+.header__title {
+  font-size: 100px;
+  font-weight: 700;
+  margin: 0;
+}
+.header__subtitle {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.header__image {
+  width: 190px;
+  height: 190px;
+  background-size: cover;
+  box-shadow: 0px 5px 10px -1px rgb(0 0 0 / 70%);
+}
+.actions {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+.actions > * {
+  margin-right: 30px;
+}
