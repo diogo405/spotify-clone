@@ -14,9 +14,20 @@
   border: 1px solid #423a39;
   border-radius: 5px;
 }
+.sidebar-mobile {
+  display: none;
+  padding: 15px 20px 10px 15px;
+}
+.sidebar-mobile .sidebar__logo {
+  max-width: 30px;
+  padding: 0;
+}
 
 @media (max-width: 578px) {
   .sidebar {
-    height: fit-content;
+    display: none;
+  }
+  .sidebar-mobile {
+    display: block;
   }
 }

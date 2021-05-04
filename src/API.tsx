@@ -1,7 +1,9 @@
 import {ICard} from './components/Card'
+import {ITrack} from './components/Track'
 import recentPlayed from './json/recentPlayed.json'
 import suggestions from './json/suggestions.json'
 import playlists from './json/playlists.json'
+import tracks from './json/tracks.json'
 
 export interface ISuggestion {
   id: number,
@@ -33,3 +35,10 @@ export const getPlaylists = (): Promise<Array<string>> => {
   })
 }
 
+export const getTracks = (): Promise<Array<ITrack>> => {
+  return new Promise<Array<ITrack>>((resolve, reject) => {
+    setTimeout(() => {
+      resolve(tracks)
+    }, Math.random() * 3 * 1000)
+  })
+}

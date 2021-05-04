@@ -1,6 +1,6 @@
 .heart {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   fill: white;
   cursor: pointer;
   transition: all 350ms ease-out;
