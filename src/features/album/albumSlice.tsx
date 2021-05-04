@@ -15,7 +15,6 @@ export const albumSlice = createSlice({
   initialState,
   reducers: {
     set: (state, action) => {
-      console.log('set')
       state.title = action.payload.title
       state.thumbnail = action.payload.thumbnail
     },
