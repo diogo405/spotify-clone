@@ -11,6 +11,9 @@ body {
   color: white;
   height: 100vh;
 }
+a {
+  text-decoration: none;
+}
 
 .title {
   font-size: 32px;

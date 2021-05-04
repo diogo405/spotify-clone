@@ -33,6 +33,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  color: white;
 }
 .card__artist {
   font-size: 13px;

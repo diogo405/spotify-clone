@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './styles.css'
 import Skeleton from '../Skeleton'
 import Card, {ICard} from '../Card'
@@ -22,13 +23,15 @@ const RecentlyPlayed: React.FC<IRecentPlayed> = ({albums, loading}) => {
           </>
         ) : (
           albums.map(album => (
-            <Card
-              id={album.id}
-              title={album.title}
-              artist={album.artist}
-              thumbnail={album.thumbnail}
-              key={album.id}
-            />
+            <Link to={`/album/${album.id}`} key={album.id}>
+              <Card
+                id={album.id}
+                title={album.title}
+                artist={album.artist}
+                thumbnail={album.thumbnail}
+                key={album.id}
+              />
+            </Link>
           ))
         )}
       </div>
