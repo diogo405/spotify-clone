@@ -7,11 +7,12 @@ export interface ICard {
   title: string,
   artist: string,
   thumbnail: string,
+  onClick?: () => void
 }
 
-const Card: React.FC<ICard> = ({title, artist, thumbnail}) => {
+const Card: React.FC<ICard> = ({title, artist, thumbnail, onClick}) => {
   return (
-    <div className="card">
+    <div className="card" onClick={onClick}>
       <div
         className="card__thumbnail"
         style={{backgroundImage: `url(${thumbnail})`}}

@@ -1,9 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import './styles.css'
 import {ISuggestion} from '../../API'
 import Chip from '../Chip'
 import Skeleton from '../Skeleton'
+import {useAppDispatch} from '../../app/hooks'
+import {set} from '../../features/album/albumSlice'
 
 interface IGreeting {
   greetingSuggestions: Array<ISuggestion>
@@ -11,6 +13,14 @@ interface IGreeting {
 }
 
 const Greeting: React.FC<IGreeting> = ({greetingSuggestions, loading}) => {
+  const dispatch = useAppDispatch()
+  const history = useHistory()
+
+  const handleChip = (id: number, title: string, thumbnail: string) => {
+    dispatch(set({title, thumbnail}))
+    history.push(`/album/${id}`)
+  }
+
   return (
     <section className="greeting">
       <h2 className="title">Howzit</h2>
@@ -24,11 +34,19 @@ const Greeting: React.FC<IGreeting> = ({greetingSuggestions, loading}) => {
           </>
         ) : (
           greetingSuggestions.map(suggestion => (
-            <Link to={`/album/${suggestion.id}`} key={suggestion.id}>
-              <Chip thumbnail={suggestion.thumbnail}>
-                {suggestion.title}
-              </Chip>
-            </Link>
+            <Chip
+              thumbnail={suggestion.thumbnail}
+              onClick={() =>
+                handleChip(
+                  suggestion.id,
+                  suggestion.title,
+                  suggestion.thumbnail
+                )
+              }
+              key={suggestion.id}
+            >
+              {suggestion.title}
+            </Chip>
           ))
         )}
       </div>

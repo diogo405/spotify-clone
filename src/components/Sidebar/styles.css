@@ -17,6 +17,7 @@
 .sidebar-mobile {
   display: none;
   padding: 15px 20px 10px 15px;
+  background-color: black;
 }
 .sidebar-mobile .sidebar__logo {
   max-width: 30px;

@@ -6,9 +6,11 @@ import DotMenu from '../../components/DotMenu'
 import Skeleton from '../../components/Skeleton'
 import Track, {ITrack} from '../../components/Track'
 import {getTracks} from '../../API'
+import { useAppSelector } from '../../app/hooks'
 import './styles.css'
 
 const AlbumPage = () => {
+  const album = useAppSelector((state) => state.album)
   const [tracks, setTracks] = useState<Array<ITrack>>([])
   const [loading, setLoading] = useState(true)
 
@@ -24,10 +26,10 @@ const AlbumPage = () => {
     <>
       <Back url="/" />
       <header className="header">
-        <div className="header__image" style={{backgroundImage: 'url(https://i.scdn.co/image/ab67616d0000b273f907de96b9a4fbc04accc0d5)'}}></div>
+        <div className="header__image" style={{backgroundImage: `url(${album.thumbnail})`}}></div>
         <div className="header__wrapper">
           <h2 className="header__subtitle">album</h2>
-          <h1 className="header__title">Scorpion</h1>
+          <h1 className="header__title">{album.title}</h1>
         </div>
       </header>
       <div className="actions">

@@ -5,7 +5,7 @@ interface IHeart {
   size?: 'regular' | 'big'
 }
 
-const Heart = ({size = 'regular'}) => {
+const Heart: React.FC<IHeart> = ({size = 'regular'}) => {
   const [active, setActive] = useState(false)
 
   return (

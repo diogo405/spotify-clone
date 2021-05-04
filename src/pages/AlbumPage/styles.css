@@ -21,6 +21,7 @@
   height: 190px;
   background-size: cover;
   box-shadow: 0px 5px 10px -1px rgb(0 0 0 / 70%);
+  flex-shrink: 0;
 }
 .actions {
   display: flex;

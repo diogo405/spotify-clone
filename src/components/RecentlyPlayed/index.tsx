@@ -1,8 +1,10 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import './styles.css'
 import Skeleton from '../Skeleton'
 import Card, {ICard} from '../Card'
+import {useAppDispatch} from '../../app/hooks'
+import {set} from '../../features/album/albumSlice'
 
 interface IRecentPlayed {
   albums: Array<ICard>
@@ -10,6 +12,14 @@ interface IRecentPlayed {
 }
 
 const RecentlyPlayed: React.FC<IRecentPlayed> = ({albums, loading}) => {
+  const dispatch = useAppDispatch()
+  const history = useHistory()
+
+  const handleCard = (id: number, title: string, thumbnail: string) => {
+    dispatch(set({title, thumbnail}))
+    history.push(`/album/${id}`)
+  }
+
   return (
     <section className="rplayed">
       <h2 className="subtitle">Recently Played</h2>
@@ -23,15 +33,14 @@ const RecentlyPlayed: React.FC<IRecentPlayed> = ({albums, loading}) => {
           </>
         ) : (
           albums.map(album => (
-            <Link to={`/album/${album.id}`} key={album.id}>
-              <Card
-                id={album.id}
-                title={album.title}
-                artist={album.artist}
-                thumbnail={album.thumbnail}
-                key={album.id}
-              />
-            </Link>
+            <Card
+              id={album.id}
+              title={album.title}
+              artist={album.artist}
+              thumbnail={album.thumbnail}
+              onClick={() => handleCard(album.id, album.title, album.thumbnail)}
+              key={album.id}
+            />
           ))
         )}
       </div>
