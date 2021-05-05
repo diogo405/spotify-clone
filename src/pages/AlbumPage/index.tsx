@@ -22,7 +22,7 @@ const AlbumPage = () => {
       setTracks(res)
       setLoading(false)
     })()
-  }, [])
+  }, [main])
 
   return (
     <>
