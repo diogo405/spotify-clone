@@ -6,8 +6,8 @@ const Menu = () => {
   return (
     <nav className="menu">
       <ul className="menu__list">
-        <li className="list-item">
-          <Link to="/">
+        <li>
+          <Link className="list-item" to="/">
             <svg
               className="list-item__icon"
               xmlns="http://www.w3.org/2000/svg"
