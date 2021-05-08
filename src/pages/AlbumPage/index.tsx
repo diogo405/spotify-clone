@@ -13,11 +13,12 @@ const AlbumPage = () => {
   const album = useAppSelector((state) => state.album)
   const [tracks, setTracks] = useState<Array<ITrack>>([])
   const [loading, setLoading] = useState(true)
-  const main = document.querySelector('main')
+  const main = document.querySelector('main')!
 
   useEffect(() => {
     (async () => {
-      main?.scrollTo(0, 0)
+      main.scrollTo(0, 0)
+      window.scrollTo(0, 0) // mobile :|
       const res = await getTracks()
       setTracks(res)
       setLoading(false)
